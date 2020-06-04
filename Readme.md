@@ -131,18 +131,9 @@
             **图 4**  AIPP配置<a name="zh-cn_topic_0203223294_fig1682055223010"></a>  
             ![](figures/AIPP配置.png "AIPP配置")
 
-        6.  单击**Finish**，开始进行模型转换。
+        6.  单击**OK**开始转换模型。
 
-            转换时，会出现[图 模型转换错误](#zh-cn_topic_0203223294_fig2865313121718)中所示的报错信息。
-
-            **图 5**  模型转换错误<a name="zh-cn_topic_0203223294_fig2865313121718"></a>  
-            
-
-            ![](figures/model_maskdetection_coversionfailed.png)
-
-            此时在**DetectionOutput**层的**Suggestion**中选择**SSDDetectionOutput**，并点击**Retry**。
-
-            模型转换成功后，后缀为.om的离线模型存放地址为：$HOME/modelzoo/mask\_detection/device。
+        模型转换成功后，后缀为.om的离线模型存放地址为：$HOME/modelzoo/mask\_detection/device。
 
             >![](public_sys-resources/icon-note.gif) **说明：**   
             >Mindstudio模型转换中每一步的具体意义和参数说明可以参考[Mind Studio用户手册](https://ascend.huawei.com/doc/mindstudio/)中的“模型转换“章节。  
