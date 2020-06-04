@@ -126,7 +126,7 @@
 
             关闭**Quantization Configuration**按钮，不开启量化。
 
-        5.  单击**Next**，进入AIPP配置界面。需要将**Input Image Size**分别修改为384,304， 此处需要做128\*16对齐。需要将**Model Image Format**修改为BGR888\_U8。其他使用默认值。如[图 AIPP配置](#zh-cn_topic_0203223294_fig1682055223010)所示
+        5.  单击**Next**，进入AIPP配置界面。需要将**Model Image Format**修改为BGR888\_U8。关闭Mean Less，打开Multiplying Factor，全部填写0.003922。其他使用默认值。如[图 AIPP配置](#zh-cn_topic_0203223294_fig1682055223010)所示
 
             **图 4**  AIPP配置<a name="zh-cn_topic_0203223294_fig1682055223010"></a>  
             ![](figures/AIPP配置.png "AIPP配置")
