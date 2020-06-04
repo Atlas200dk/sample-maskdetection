@@ -207,7 +207,7 @@ class FaceDetectionServer(PresenterSocketServer):
         self.set_exit_switch()
 
 def run():
-    '''Entrance function of Face Detection Server '''
+    '''Entrance function of mask Detection Server '''
     # read config file
     config = ConfigParser()
 

@@ -1,0 +1,1 @@
+/home/ascend/x_test/sample-maskdetection/build/intermediates/device/../../../run/out/libDevice.so

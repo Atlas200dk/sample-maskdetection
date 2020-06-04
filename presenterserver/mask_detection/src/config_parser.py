@@ -30,7 +30,7 @@
 #   =======================================================================
 #
 
-"""face detection config parser module"""
+"""mask detection config parser module"""
 
 import os
 import configparser
