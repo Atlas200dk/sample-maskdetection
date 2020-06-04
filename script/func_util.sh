@@ -8,7 +8,7 @@ PROTOC="$DDK_HOME/bin/x86_64-linux-gcc5.4/protoc"
 
 function check_python3_lib()
 {
-    echo "Check python3 libs ......"
+    echo "Install python3 libs: pip3 install -r ${tools_path}/presenterserver/requirements..."
 
     tornado_obj=`cat ${tools_path}/presenterserver/requirements | grep tornado | awk -F'[ =]+' '{print $2}'`
     if [ $? -ne 0 ];then
@@ -366,30 +366,33 @@ function is_proto_version_match()
         return 0
     fi
 
-    min_version=$(grep "PROTOBUF_VERSION" $file | awk -F ' ' '{print $4}' | sed 's/00/./g')
+	min_version=$(grep "PROTOBUF_VERSION" $file | awk -F ' ' '{print $4}' | sed 's/00/./g')
     if [ -z "$min_version" ]; then
         echo "Get min version from $file failed"
         return 0
     fi
-    
-    max_version=$(grep "PROTOBUF_MIN_PROTOC_VERSION" $file | awk -F ' ' '{print $2}' | sed 's/00/./g')
+    echo "min verison $min_version"
+
+	max_version=$(grep "PROTOBUF_MIN_PROTOC_VERSION" $file | awk -F ' ' '{print $2}' | sed 's/00/./g')
     if [ -z "$max_version" ]; then
         echo "Get max version from $file failed"
         return 0
     fi
+    echo "max verison $max_version"
 
-    protoc_version=$($PROTOC --version | awk -F ' ' '{print $2}')
+	protoc_version=$($PROTOC --version | awk -F ' ' '{print $2}')
     if [ -z "$protoc_version" ]; then
         echo "Get protoc version from $file failed"
         return 0
     fi
+    echo "protoc verison $protoc_version"
 
-    if [[ $protoc_version == $min_version ]] || [[ $protoc_version == $max_version ]] ||\
+	if [[ $protoc_version == $min_version ]] || [[ $protoc_version == $max_version ]] ||\
        ([[ $protoc_version > $min_version ]] && [[ $protoc_version < $max_version ]]); then
-        return 1
-    fi
+		return 1
+	fi
     
-    return 0
+	return 0
 }	
 
 # ************************generate_proto_code***********************************

@@ -1,7 +1,0 @@
-/home/ascend/x_test/sample-maskdetection/build/intermediates/device/CMakeFiles/install/strip.dir
-/home/ascend/x_test/sample-maskdetection/build/intermediates/device/CMakeFiles/edit_cache.dir
-/home/ascend/x_test/sample-maskdetection/build/intermediates/device/CMakeFiles/Device.dir
-/home/ascend/x_test/sample-maskdetection/build/intermediates/device/CMakeFiles/rebuild_cache.dir
-/home/ascend/x_test/sample-maskdetection/build/intermediates/device/CMakeFiles/list_install_components.dir
-/home/ascend/x_test/sample-maskdetection/build/intermediates/device/CMakeFiles/install/local.dir
-/home/ascend/x_test/sample-maskdetection/build/intermediates/device/CMakeFiles/install.dir

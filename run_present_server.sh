@@ -1,6 +1,6 @@
 #!/bin/bash
 app_path="$( cd "$(dirname ${BASH_SOURCE})" ; pwd -P )"
-app_name="mask_detection"
+app_name="maskdetection"
 
 . ${app_path}/script/func_util.sh
 
@@ -29,10 +29,10 @@ function main()
 
     #1.检查完毕ip之后，将ip的数值复制到config.config 
     echo "Use ${presenter_atlasdk_ip} to connect to Atlas DK Developerment Board..."
-    sed -i "s/presenter_server_ip=[0-9.]*/presenter_server_ip=${presenter_atlasdk_ip}/g" ${app_path}/presenterserver/mask_detection/config/config.conf
+    sed -i "s/presenter_server_ip=[0-9.]*/presenter_server_ip=${presenter_atlasdk_ip}/g" ${app_path}/presenterserver/${app_name}/config/config.conf
     
     echo "Use ${presenter_view_ip} to show information in browser..."
-    sed -i "s/web_server_ip=[0-9.]*/web_server_ip=${presenter_view_ip}/g" ${app_path}/presenterserver/mask_detection/config/config.conf
+    sed -i "s/web_server_ip=[0-9.]*/web_server_ip=${presenter_view_ip}/g" ${app_path}/presenterserver/${app_name}/config/config.conf
     
     echo "Finish to prepare ${app_name} presenter server ip configuration."
     

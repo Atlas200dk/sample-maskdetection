@@ -43,13 +43,13 @@ WEB_SERVER = None
 APP_SERVER = None
 RUN_SERVER = None
 SERVER_TYPE = ""
-USAGE_INFO = "python3 prensenter_server.py [-h] --app \n\t\t\t\t{mask_detection}"
+USAGE_INFO = "python3 prensenter_server.py [-h] --app \n\t\t\t\t{maskdetection}"
 
-FACE_DETION_MAP = {"web_server": "mask_detection.src.web",
-                    "app_server": "mask_detection.src.mask_detection_server"
+MASKDETECTION_MAP = {"web_server": "maskdetection.src.web",
+                    "app_server": "maskdetection.src.maskdetection_server"
                   }
 
-APP_CONF_MAP = {"mask_detection": FACE_DETION_MAP}
+APP_CONF_MAP = {"maskdetection": MASKDETECTION_MAP}
 
 
 def arg_parse():
@@ -60,7 +60,7 @@ def arg_parse():
 
     parser = argparse.ArgumentParser(usage=USAGE_INFO)
     parser.add_argument('--app', type=str, required=True,
-                        choices=['mask_detection'],
+                        choices=['maskdetection'],
                         help="Application type corresponding to Presenter Server.")
     args = parser.parse_args()
     SERVER_TYPE = args.app

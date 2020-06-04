@@ -1,7 +1,7 @@
 #!/bin/bash
 
 script_path="$( cd "$(dirname ${BASH_SOURCE})" ; pwd -P )"
-remote_host=$1
+atlas_target=$1
 presenteragent_version="1.2.0"
 HOST_LIB_PATH="${HOME}/ascend_ddk/host/lib"
 AGENT_PATH="${HOME}/ascend_ddk"
@@ -24,6 +24,7 @@ function download_code()
     fi
 
     mv ${AGENT_PATH}/presenteragent-${presenteragent_version}.ing ${AGENT_PATH}/presenteragent-${presenteragent_version}.zip
+
     unzip ${AGENT_PATH}/presenteragent-${presenteragent_version}.zip -d ${AGENT_PATH} 1>/dev/null
     if [[ $? -ne 0 ]];then
         echo "ERROR: uncompress presenteragent tar.gz file failed, please check ${presenteragent_download_url} connection."
@@ -46,21 +47,16 @@ function build_presenteragent()
         echo "Presenteragent so is found.."
         return 0
     fi
-
-    protobuf_path=`find $DDK_HOME/../RC -maxdepth 3 -name "libprotobuf.so" 2> /dev/null`
-    if [[ ! ${protobuf_path} ]];then
-        echo "[ERROR]libprotobuf so can not found"
-    fi
-    protobuf_dir_path=`dirname $protobuf_path`
-    export NPU_HOST_LIB=${protobuf_dir_path}
     
-    make clean -C ${AGENT_PATH}/presenteragent 1>/dev/null 2>&1
+    make clean mode=${atlas_target} -C ${AGENT_PATH}/presenteragent 1>/dev/null 2>&1
     if [[ $? -ne 0 ]];then
         echo "ERROR: compile presenteragent failed, please check the env."
         return 1
     fi
-    make install -C ${AGENT_PATH}/presenteragent 1>/dev/null 2>&1
+    
+    make install mode=${atlas_target} -C ${AGENT_PATH}/presenteragent 1>/dev/null 2>&1
     if [[ $? -ne 0 ]];then
+        make clean mode=${atlas_target} -C ${AGENT_PATH}/presenteragent 1>/dev/null 2>&1
         echo "ERROR: compile presenteragent failed, please check the env."
         return 1
     fi
@@ -92,22 +88,26 @@ main()
     fi
 
     build_presenteragent
-
     if [[ $? -ne 0 ]];then
         return 1
     fi
-
     echo "Finish to Build presenteragent."
 
     echo "Start to deploy presenteragent"
-    upload_file "${HOST_LIB_PATH}/libpresenteragent.so" "~/HIAI_PROJECTS/ascend_lib"
-    if [ $? -ne 0 ];then
-        return  1
+
+    mkdir -p ${script_path}/../lib/host
+    if [[ $? -ne 0 ]];then
+        echo "mkdir -p ${script_path}/../lib/host failed!"
+        return 1
     fi
+    cp ${HOST_LIB_PATH}/libpresenteragent.so ${script_path}/../lib/host
+    if [ $? -ne 0 ];then
+        echo "cp ${HOST_LIB_PATH}/libpresenteragent.so ${script_path}/../lib/host failed!"
+        return 1
+    fi
+
     echo "Finish to deploy presenteragent"
 
-
-    exit 0
+    return 0
 }
-
 main
