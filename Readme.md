@@ -32,7 +32,7 @@
 
     参考[表1](#zh-cn_topic_0203223294_table144841813177)获取此应用中所用到的原始网络模型及其对应的权重文件，并将其存放到Mind Studio所在Ubuntu服务器的任意目录，这两个文件必须存放到同一个目录下。例如：$HOME/models/maskdetection。
 
-    **表 1**  mask Detection中使用模型
+    **表 1**  Mask Detection中使用模型
 
     <a name="zh-cn_topic_0203223294_table144841813177"></a>
     <table><thead align="left"><tr id="zh-cn_topic_0203223294_row161061318181712"><th class="cellrowborder" valign="top" width="13.61%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0203223294_p1410671814173"><a name="zh-cn_topic_0203223294_p1410671814173"></a><a name="zh-cn_topic_0203223294_p1410671814173"></a>模型名称</p>
