@@ -1,2 +1,0 @@
-/home/ascend/x_test/sample-maskdetection/build/intermediates/host/../../../run/out/main
-/home/ascend/x_test/sample-maskdetection/build/intermediates/host/../../../run/out/libHost.so
