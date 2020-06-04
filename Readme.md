@@ -179,7 +179,7 @@
     **图 6**  打开maskdetection工程<a name="zh-cn_topic_0203223294_fig05481157171918"></a>  
     
 
-    ![](figures/打开工程项目-人脸检测.png)
+    ![](figures/打开工程项目-口罩检测.png)
 
 2.  在**src/param\_configure.conf**文件中配置相关工程信息。
 
