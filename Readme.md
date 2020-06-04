@@ -151,8 +151,7 @@
             ```
 
             >![](public_sys-resources/icon-note.gif) **说明：**   
-            >-   input\_shape、insert\_op\_conf、op\_name\_map所需要的文件都在源码所在路径下的“sample-maskdetection/script”目录下，请根据您实际的源码所在路径配置这些文件路径。  
-            >-   每个参数的具体意义可参考[Atlas 200 DK用户手册](https://ascend.huawei.com/doc/atlas200dk/)中的“模型转换“章节。  
+            >-   **XXX**为[表 人体检测应用中使用模型](#zh-cn_topic_0203223281_table1193115345597)中的TensorFlow模型名称，转换时请替换填入需要转换的TensorFlow模型名称。  
 
 
 5.  将转换好的模型文件（.om文件）上传到[步骤1](#zh-cn_topic_0203223294_li953280133816)中源码所在路径下的“**sample-maskdetection/script**”目录下。
