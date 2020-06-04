@@ -147,7 +147,7 @@
         2.  使用omg工具执行以下命令进行模型转换。
 
             ```
-            ${DDK_HOME}/uihost/bin/omg --output="./mask_detection" --model="./mask_detection.prototxt" --framework=0 --ddk_version=${tools_version} --weight="./mask_detection.caffemodel" --input_shape=`head -1 $HOME/AscendProjects/sample-maskdetection/script/shape_mask_detection` --insert_op_conf=$HOME/AscendProjects/sample-maskdetection/script/aipp_mask_detection.cfg --op_name_map=$HOME/AscendProjects/sample-maskdetection/script/reassign_operators
+            ${DDK_HOME}/uihost/bin/omg --output="./XXX" --model="./XXX.pb" --framework=3 --ddk_version=${tools_version} --input_shape=`head -1 $HOME/AscendProjects/sample-videoanalysisperson/script/shape_XXX` --insert_op_conf=$HOME/AscendProjects/sample-videoanalysisperson/script/aipp_XXX.cfg
             ```
 
             >![](public_sys-resources/icon-note.gif) **说明：**   
