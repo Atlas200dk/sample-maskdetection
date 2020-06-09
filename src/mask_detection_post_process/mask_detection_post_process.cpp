@@ -61,7 +61,8 @@ namespace {
 // face label text prefix
 //const std::string kFaceLabelTextPrefix = "Face:";
 const std::string kFaceLabelTextSuffix = "%";
-const static std::vector<string> label = {"background","person", "face", "mask"};
+const static std::vector<string> label = {"background","face", "person", "mask"};
+//const static std::vector<string> label = {"background","person", "face", "mask"};
 //// parameters for drawing box and label end////
 
 // port number range
