@@ -1,4 +1,3 @@
-中文|[English](Readme_EN.md)
 
 # 口罩检测<a name="ZH-CN_TOPIC_0208834076"></a>
 
