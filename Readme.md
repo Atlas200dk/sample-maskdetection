@@ -2,7 +2,7 @@
 
 # 口罩检测<a name="ZH-CN_TOPIC_0208834076"></a>
 
-开发者可以将本application部署至Atlas 200DK上实现对摄像头数据的实时采集、并对视频中的口罩、人脸、人信息进行预测的功能。
+开发者可以将本application部署至Atlas 300上实现对视频数据的实时采集、并对视频中的口罩、人脸、人信息进行预测的功能。
 
 当前分支中的应用适配**1.32.0.0及以上**版本的[DDK&RunTime](https://ascend.huawei.com/resources)。
 
@@ -11,7 +11,6 @@
 部署此Sample前，需要准备好以下环境：
 
 -   已完成Mind Studio的安装。
--   已完成Atlas 200 DK开发者板与Mind Studio的连接，交叉编译器的安装，SD卡的制作及基本信息的配置等。
 
 ## 部署<a name="zh-cn_topic_0228461904_section412811285117"></a>
 
@@ -55,17 +54,15 @@
     该配置文件默认配置内容如下：
 
     ```
-    remote_host=192.168.1.2
-    data_source=Channel-1
+    remote_host=192.168.1.77
     presenter_view_app_name=video
     ```
 
-    -   remote\_host：配置为Atlas 200 DK开发者板的IP地址。
-    -   data\_source : 配置摄像头所属Channel，取值为Channel-1或者Channel-2，查询摄像头所属Channel的方法请参考[Atlas 200 DK用户手册](https://ascend.huawei.com/doc/Atlas200DK/)中的“如何查看摄像头所属Channel”。
+    -   remote\_host：配置为Atlas 300开发者板的IP地址。
     -   presenter\_view\_app\_name : 用户自定义的在PresenterServer界面展示的View Name，此View Name需要在Presenter Server展示界面唯一，只能为大小写字母、数字、“/”的组合，位数至少1位。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   三个参数必须全部填写，否则无法通过编译。  
+    >-   两个个参数必须全部填写，否则无法通过编译。  
     >-   注意参数填写时不需要使用“”符号。  
     >-   当前已经按照配置示例配置默认值，请按照配置情况自行修改。  
 
@@ -119,17 +116,6 @@
 
     **图 13**  主页显示<a name="zh-cn_topic_0203223294_fig64391558352"></a>  
     ![](figures/主页显示.png "主页显示")
-
-    Presenter Server、Mind Studio与Atlas 200 DK之间通信使用的IP地址示例如下图所示：
-
-    **图 14**  IP地址示例<a name="zh-cn_topic_0203223294_fig1881532172010"></a>  
-    ![](figures/IP地址示例.png "IP地址示例")
-
-    其中：
-
-    -   Atlas 200 DK开发者板使用的IP地址为192.168.1.2（USB方式连接）。
-    -   Presenter Server与Atlas 200 DK通信的IP地址为UI Host服务器中与Atlas 200 DK在同一网段的IP地址，例如：192.168.1.223。
-    -   通过浏览器访问Presenter Server的IP地址本示例为：10.10.0.1，由于Presenter Server与Mind Studio部署在同一服务器，此IP地址也为通过浏览器访问Mind Studio的IP。
 
 
 ## 运行<a name="zh-cn_topic_0203223294_section551710297235"></a>
