@@ -2,7 +2,7 @@
 
 # 口罩检测<a name="ZH-CN_TOPIC_0208834076"></a>
 
-开发者可以将本application部署至Atlas 200DK上实现对摄像头数据的实时采集、并对视频中的口罩、人脸、人信息进行预测的功能。
+开发者可以将本application部署至Atlas 300上实现对摄像头数据的实时采集、并对视频中的口罩、人脸、人信息进行预测的功能。
 
 当前分支中的应用适配**1.32.0.0及以上**版本的[DDK&RunTime](https://ascend.huawei.com/resources)。
 
@@ -11,7 +11,7 @@
 部署此Sample前，需要准备好以下环境：
 
 -   已完成Mind Studio的安装。
--   已完成Atlas 200 DK开发者板与Mind Studio的连接，交叉编译器的安装，SD卡的制作及基本信息的配置等。
+-   已完成Atlas 300开发者板与Mind Studio的连接，交叉编译器的安装，SD卡的制作及基本信息的配置等。
 
 ## 软件准备<a name="zh-cn_topic_0203223294_section081240125311"></a>
 
@@ -20,13 +20,13 @@
 1.  <a name="zh-cn_topic_0203223294_li953280133816"></a>获取源码包。
     1.  下载压缩包方式获取。
 
-        将[https://gitee.com/Atlas200DK/sample-maskdetection/tree/master/](https://gitee.com/Atlas200DK/sample-maskdetection/tree/master/)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/AscendProjects/sample-maskdetection。
+        将[https://gitee.com/Atlas200DK/sample-maskdetection/tree/1.3X.0.0_AL1/](https://gitee.com/Atlas200DK/sample-maskdetection/tree/1.3X.0.0_AL1/)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/AscendProjects/sample-maskdetection。
 
     2.  命令行使用git命令方式获取。
 
         在命令行中：$HOME/AscendProjects目录下执行以下命令下载代码。
 
-        **git clone https://gitee.com/Atlas200DK/sample-maskdetection.git --branch master**
+        **git clone https://gitee.com/Atlas200DK/sample-maskdetection.git --branch 1.3X.0.0_AL1**
 
 2.  <a name="zh-cn_topic_0203223294_li1365682471610"></a>获取此应用中所需要的原始网络模型。
 
@@ -147,7 +147,7 @@
         2.  使用omg工具执行以下命令进行模型转换。
 
             ```
-            ${DDK_HOME}/uihost/bin/omg --output="./XXX" --model="./XXX.pb" --framework=3 --ddk_version=${tools_version} --input_shape=`head -1 $HOME/AscendProjects/sample-videoanalysisperson/script/shape_XXX` --insert_op_conf=$HOME/AscendProjects/sample-videoanalysisperson/script/aipp_XXX.cfg
+            ${DDK_HOME}/uihost/bin/omg --output="./XXX" --model="./XXX.pb" --framework=3 --ddk_version=${tools_version} --input_shape=`head -1 $HOME/AscendProjects/sample-maskdetection/script/shape_XXX` --insert_op_conf=$HOME/AscendProjects/sample-maskdetection/script/aipp_XXX.cfg
             ```
 
             >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -188,7 +188,7 @@
     presenter_view_app_name=video
     ```
 
-    -   remote\_host：配置为Atlas 200 DK开发者板的IP地址。
+    -   remote\_host：配置为Atlas 300开发者板的IP地址。
     -   data\_source : 配置摄像头所属Channel，取值为Channel-1或者Channel-2，查询摄像头所属Channel的方法请参考[Atlas 200 DK用户手册](https://ascend.huawei.com/doc/Atlas200DK/)中的“如何查看摄像头所属Channel”。
     -   presenter\_view\_app\_name : 用户自定义的在PresenterServer界面展示的View Name，此View Name需要在Presenter Server展示界面唯一，只能为大小写字母、数字、“/”的组合，位数至少1位。
 
