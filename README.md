@@ -4,7 +4,7 @@ EN|[CH](Readme_cn.md)
 
 Developers can deploy the application on the Atlas 200 DK to collect camera data in real time and predict masks, facial and human information in the video.
 
-The applications in the current version branch adapt to [DDK&RunTime](https://ascend.huawei.com/resources)。 1.32.0.0 and later.
+The applications in the current version branch adapt to [DDK&RunTime](https://ascend.huawei.com/resources) 1.32.0.0 and later.
 
 ## Prerequisites<a name="zh-cn_topic_0203223294_section137245294533"></a>
 
@@ -28,7 +28,7 @@ You can use either of the following methods:
     >![](public_sys-resources/icon-note.gif) **NOTE：**   
     >-   In this deployment mode, you need to manually download code, convert models, and configure environment variables.
 
-## Compilation<a name="zh-cn_topic_0203223294_section7994174585917"></a>
+## Build<a name="zh-cn_topic_0203223294_section7994174585917"></a>
 
 1.  Open corresponding project.
 
@@ -70,7 +70,7 @@ You can use either of the following methods:
     >-   Do not use double quotation marks ("") during parameter settings.
     >-   Modify the default configurations as required.
 
-3.  Run deploy.sh script to adjust configuration parameters and download and compile the third-party library. Open the Terminal window of Mind Studio. By default, the home directory of the code is used. Run the deploy.sh script in the background to deploy the environment, as shown in [Figure8 Running deploy.sh script](#zh-cn_topic_0203223294_fig107831626101910)所示。
+3.  Run deploy.sh script to adjust configuration parameters and download and compile the third-party library. Open the Terminal window of Mind Studio. By default, the home directory of the code is used. Run the deploy.sh script in the background to deploy the environment, as shown in [Figure8 Running deploy.sh script](#zh-cn_topic_0203223294_fig107831626101910).
 
     **Figure 8**  Running deploy.sh script<a name="zh-cn_topic_0203223294_fig107831626101910"></a>  
     ![](figures/执行deploy脚本.png "执行deploy脚本")
