@@ -17,13 +17,13 @@ The Atlas 200 DK developer board has been connected to Mind Studio, the cross co
 
 You can use either of the following methods:
 
-1.  Quick deployment: visit [https://github.com/Atlas200dk/faster-deploy](https://github.com/Atlas200dk/faster-deploy)  。
+1.  Quick deployment: visit [https://github.com/Atlas200dk/faster-deploy](https://github.com/Atlas200dk/faster-deploy) 
 
     >![](public_sys-resources/icon-note.gif) **NOTE：**   
     >-   The quick deployment script can be used to deploy multiple samples rapidly. Select the mask detection deployment sample.
     >-   The quick deployment script automatically completes code download, model conversion, and environment variable configuration. To learn about the detailed deployment process, go to: **[2. Common deployment](#zh-cn_topic_0228461904_li3208251440)**  
 
-2.  <a name="zh-cn_topic_0228461904_li3208251440"></a>Common deployment: visit [https://github.com/Atlas200dk/sample-README/tree/master/sample-maskdetection](https://github.com/Atlas200dk/sample-README/tree/master/sample-maskdetection)  。
+2.  <a name="zh-cn_topic_0228461904_li3208251440"></a>Common deployment: visit [https://github.com/Atlas200dk/sample-README/tree/master/sample-maskdetection](https://github.com/Atlas200dk/sample-README/tree/master/sample-maskdetection)  
 
     >![](public_sys-resources/icon-note.gif) **NOTE：**   
     >-   In this deployment mode, you need to manually download code, convert models, and configure environment variables.
@@ -36,7 +36,7 @@ You can use either of the following methods:
     
     **./MindStudio.sh**
 
-    Open **sample-maskdetection** project，as shown in[Figure6  Open Maskdetection Project](#zh-cn_topic_0203223294_fig05481157171918).
+    Open **sample-maskdetection** project，as shown in [Figure6  Open Maskdetection Project](#zh-cn_topic_0203223294_fig05481157171918).
 
     **Figure 6**  Open Maskdetection Project<a name="zh-cn_topic_0203223294_fig05481157171918"></a>  
     
@@ -45,7 +45,7 @@ You can use either of the following methods:
 
 2.  Configure project information in file: **src/param\_configure.conf**.
 
-    As shown in[Figure7 Configuration File Path](#zh-cn_topic_0203223294_fig0391184062214).
+    As shown in [Figure7 Configuration File Path](#zh-cn_topic_0203223294_fig0391184062214).
 
     **Figure 7**  Configuration File Path<a name="zh-cn_topic_0203223294_fig0391184062214"></a>  
     
@@ -89,7 +89,7 @@ You can use either of the following methods:
     >![](public_sys-resources/icon-notice.gif) **NOTICE:**   
     >When you build a project for the first time, **Build \> Build** is unavailable. You need to choose **Build \> Edit Build Configuration** to set parameters before the build.  
 
-5.  Start Presenter Server。
+5.  Start Presenter Server
 
     Open the Terminal window of Mind Studio. Under the code storage path, run the following command to start the Presenter Server program of the mask detection application on the server, as shown in [Figure10 Start Presenter Server](#zh-cn_topic_0203223294_fig423515251067):
 
